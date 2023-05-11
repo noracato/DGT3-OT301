@@ -9,8 +9,19 @@ function fillScreen() {
     for (var i=0; i < amount; i++) {
         addRow(i);
     }
+
+    flipRandomSquares(amount * 10);
 }
 
+function flipRandomSquares(amount) {
+    let squares = $('.square');
+    let index;
+
+    for (let i = 0; i <amount; i++){
+        index = Math.floor(Math.random() * squares.length)
+        flip($(squares[index]));
+    }
+}
 
 function addRow(i) {
     let amount = 100 / squareViewWidth;
