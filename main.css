@@ -1,0 +1,175 @@
+:root {
+    --border-radius-small: 25%;
+    --state-1-color: #eee;
+    --state-2-color: #000;
+  }
+
+
+body {
+    margin: 0;
+}
+.header {
+    background-color: var(--state-2-color);
+}
+.header button {
+    border: none;
+    background: none;
+    color: var(--state-1-color);
+    margin-left: 10px;
+}
+.header button:hover {
+    cursor: pointer;
+    color: #ddd;
+}
+.header button:active {
+    color: #eee;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.square {
+    width: 3vw;
+    height: 3vw;
+}
+.straight-sq {
+    display: flex;
+}
+
+.state-1 {
+    background-color: var(--state-1-color);
+}
+.state-1.invert-sq {
+    background-color: var(--state-2-color);
+}
+
+.state-2 {
+    background-color: var(--state-2-color);
+}
+.state-2.invert-sq {
+    background-color: var(--state-1-color);
+}
+
+.state-1 div {
+    background-color: var(--state-2-color);
+    width: 100%;
+    height: 100%;
+}
+.state-2 div {
+    background-color: var(--state-1-color);
+    width: 100%;
+    height: 100%;
+}
+
+.inner {
+    border-radius: 1.5vw;
+}
+.full {
+    border-radius: none;
+}
+.straight {
+    width: 20% !important;
+    height: 20% !important;
+    border-radius: none !important;
+}
+.state-2 .invert {
+    background-color: var(--state-2-color);
+}
+.state-1 .invert {
+    background-color: var(--state-1-color);
+}
+.state-2 .full {
+    background-color: var(--state-2-color);
+}
+.state-1 .full {
+    background-color: var(--state-1-color);
+}
+/* two sided */
+
+.right-down {
+    border-top-left-radius: var(--border-radius-small);
+}
+.left-down {
+    border-top-right-radius: var(--border-radius-small);
+}
+.right-top {
+    border-bottom-left-radius: var(--border-radius-small);
+}
+.left-top {
+    border-bottom-right-radius: var(--border-radius-small);
+}
+.top-down.straight {
+    height: 100%;
+    margin: 0 auto;
+}
+.left-right.straight {
+    width: 100%;
+}
+
+/* one sided */
+.left {
+    border-top-right-radius: var(--border-radius-small);
+    border-bottom-right-radius: var(--border-radius-small);
+}
+.right {
+    border-top-left-radius: var(--border-radius-small);
+    border-bottom-left-radius: var(--border-radius-small);
+}
+.top {
+    border-bottom-right-radius: var(--border-radius-small);
+    border-bottom-left-radius: var(--border-radius-small);
+}
+.down {
+    border-top-left-radius: var(--border-radius-small);
+    border-top-right-radius: var(--border-radius-small);
+}
+.top.straight {
+    height: 50%;
+
+}
+.down.straight {
+    height: 50%;
+    align-self: flex-end;
+}
+
+/* logic-state 2 */
+.right-down-s2 {
+    border-top-left-radius: 3vw;
+}
+.left-down-s2 {
+    border-top-right-radius: 3vw;
+}
+.right-top-s2 {
+    border-bottom-left-radius: 3vw;
+}
+.left-top-s2 {
+    border-bottom-right-radius: 3vw;
+}
+
+@-webkit-keyframes blinker {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}
+@keyframes blinker {
+    from { opacity: 1.0; }
+    to { opacity: 0.0; }
+}
+
+.blink {
+    -webkit-animation-name: blinker;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: cubic-bezier(.5, 0, 1, 1);
+    -webkit-animation-duration: 1.7s;
+
+    animation-name: blinker;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.5, 0, 1, 1);
+    animation-duration: 1.7s;
+}
