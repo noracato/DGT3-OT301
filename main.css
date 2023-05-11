@@ -10,6 +10,19 @@ body {
     margin: 0;
 }
 
+@media screen and (max-width: 550px) {
+    .square {
+        width: 20vw;
+        height: 20vw;
+    }
+}
+@media screen and (min-width: 551px) {
+    .square {
+        width: 6vw;
+        height: 6vw;
+    }
+}
+
 .text {
     position: absolute;
     top: 34vh;
@@ -47,8 +60,8 @@ body {
 }
 
 .square {
-    width: 6vw;
-    height: 6vw;
+    /* width: 6vw;
+    height: 6vw; */
     background-blend-mode: difference;
     mix-blend-mode: difference;
 }
@@ -151,4 +164,5 @@ body {
     height: 50%;
     align-self: flex-end;
 }
+
 
