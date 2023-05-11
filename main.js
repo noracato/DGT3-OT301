@@ -4,9 +4,9 @@ let squareWidth = $(window).width() / (100/ squareViewWidth);
 $( document ).ready(fillScreen);
 
 function fillScreen() {
-    if (window.screen.width < 551) {
-        squareViewWidth = 20;
-    }
+    // if (window.screen.width < 551) {
+    //     squareViewWidth = 20;
+    // }
 
     let amount = $(window).height() / squareWidth;
 
