@@ -19,16 +19,14 @@ body {
     z-index: -1;
     font-weight: 800;
     line-height: 1.12;
+    margin: 1.5rem 0;
+    mix-blend-mode: difference;
 }
 .text span {
     font-weight: 300;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
     letter-spacing: -1px;
-}
-
-.text p {
-    margin: 1.5rem 0;
 }
 
 .text.top-right {
