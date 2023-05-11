@@ -1,4 +1,4 @@
-let squareViewWidth = 3;
+let squareViewWidth = 6;
 let squareWidth = $(window).width() / (100/ squareViewWidth);
 
 $( document ).ready(fillScreen);

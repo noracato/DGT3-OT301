@@ -6,28 +6,41 @@
 
 
 body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
 }
-.header {
-    background-color: var(--state-2-color);
+
+.text {
+    position: absolute;
+    top: 34vh;
+    left: 10vw;
+    font-size: 6.6rem;
+    color: #fff;
+    z-index: -1;
+    font-weight: 800;
+    line-height: 1.12;
 }
-.header button {
-    border: none;
-    background: none;
-    color: var(--state-1-color);
-    margin-left: 10px;
+.text span {
+    font-weight: 300;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    letter-spacing: -1px;
 }
-.header button:hover {
-    cursor: pointer;
-    color: #ddd;
+
+.text p {
+    margin: 1.5rem 0;
 }
-.header button:active {
-    color: #eee;
+
+.text.top-right {
+    right: 3rem;
+    top: 3rem;
+    left: auto;
 }
 
 .container {
     display: flex;
     flex-direction: column;
+
 }
 
 .row {
@@ -36,8 +49,10 @@ body {
 }
 
 .square {
-    width: 3vw;
-    height: 3vw;
+    width: 6vw;
+    height: 6vw;
+    background-blend-mode: difference;
+    mix-blend-mode: difference;
 }
 .straight-sq {
     display: flex;
@@ -139,37 +154,3 @@ body {
     align-self: flex-end;
 }
 
-/* logic-state 2 */
-.right-down-s2 {
-    border-top-left-radius: 3vw;
-}
-.left-down-s2 {
-    border-top-right-radius: 3vw;
-}
-.right-top-s2 {
-    border-bottom-left-radius: 3vw;
-}
-.left-top-s2 {
-    border-bottom-right-radius: 3vw;
-}
-
-@-webkit-keyframes blinker {
-    from { opacity: 1.0; }
-    to { opacity: 0.0; }
-}
-@keyframes blinker {
-    from { opacity: 1.0; }
-    to { opacity: 0.0; }
-}
-
-.blink {
-    -webkit-animation-name: blinker;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-timing-function: cubic-bezier(.5, 0, 1, 1);
-    -webkit-animation-duration: 1.7s;
-
-    animation-name: blinker;
-    animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(.5, 0, 1, 1);
-    animation-duration: 1.7s;
-}
