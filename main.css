@@ -17,6 +17,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     margin: 0;
+    background-color: #000;
 }
 
 @media screen and (max-width: 550px) {
@@ -148,7 +149,6 @@ body {
     display: flex;
     flex-direction: column;
     position: fixed;
-    background-blend-mode: difference;
     mix-blend-mode: difference;
     filter: blur(30px);
 }
