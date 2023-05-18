@@ -1,12 +1,27 @@
-let squareViewWidth = 6;
+let squareViewWidth = 5;
 let squareWidth = $(window).width() / (100/ squareViewWidth);
+let colors = ['yellow', '#000', '#000','#000','#000','#000','#000','#ff8686', '#57baff']
 
 $( document ).ready(fillScreen);
+
+let scrolling = false;
+$( document).scroll(function(){
+    if (!scrolling){
+        pickColor();
+        scrolling = true;
+        setTimeout(function() {
+            scrolling = false;
+        }, 500);
+    }
+
+
+});
 
 function fillScreen() {
     // if (window.screen.width < 551) {
     //     squareViewWidth = 20;
     // }
+    pickColor();
 
     let amount = $(window).height() / squareWidth;
 
@@ -15,6 +30,13 @@ function fillScreen() {
     }
 
     flipRandomSquares(amount * 12);
+}
+
+function pickColor(){
+    let colorIndex = Math.floor(Math.random() * colors.length)
+
+    var r = document.querySelector(':root');
+    r.style.setProperty('--state-2-color', colors[colorIndex]);
 }
 
 function flipRandomSquares(amount) {

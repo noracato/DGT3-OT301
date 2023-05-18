@@ -27,8 +27,8 @@ body {
 }
 @media screen and (min-width: 551px) {
     .square {
-        width: 6vw;
-        height: 6vw;
+        width: 5vw;
+        height: 5vw;
     }
 }
 
@@ -79,12 +79,13 @@ body {
     bottom: -1rem;
     transform-origin: bottom left;
     top: unset;
+    white-space: nowrap;
 }
 
 .text.date {
     line-height: 0.8;
     left: 66vw;
-    top: 60vh;
+    top: 75vh;
 }
 
 .text.invite {
@@ -111,18 +112,18 @@ body {
 }
 
 .text.gerrit {
-    top: 100vh;
+    top: 125vh;
     font-family: 'font-3';
     line-height: 0.9;
 }
 
 .text.program {
-    top: 126vh;
+    top: 151vh;
     font-weight: 300;
     font-family: 'font-3';
     letter-spacing: -0.1em;
     font-size: 3.2rem;
-    left: 66vw;
+    left: 45vw;
 }
 
 .text.program p {
