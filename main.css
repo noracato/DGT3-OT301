@@ -4,6 +4,15 @@
     --state-2-color: #000;
   }
 
+@font-face {
+    font-family: 'font-2';
+    src:  url('assets/MAZIUSREVIEW20.09-Extraitalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'font-3';
+    src:  url('assets/Solide_Mirage-Mono_web.woff') format('woff');
+}
+
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -37,21 +46,110 @@ body {
 }
 .text span {
     font-weight: 300;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: italic;
-    letter-spacing: -1px;
+    font-family: 'font-3';
+    /* font-style: italic; */
+    letter-spacing: -0.1em;
+    font-size: 3.2rem;
+}
+
+.text span.adres {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 3.1rem;
+    font-weight: 800;
+    line-height: 1.16;
+    display: block;
+    margin-top: 2rem;
+    letter-spacing: 1px;
 }
 
 .text.top-right {
-    right: 3rem;
-    top: 3rem;
+    right: 2rem;
+    top: -2rem;
     left: auto;
+    font-family: 'font-3';
+    letter-spacing: -.21em;
 }
+
+.text.turned {
+    transform: rotate(270deg);
+    position: fixed;
+    left: 10rem;
+    text-align: center;
+    font-size: 9rem;
+    bottom: -1rem;
+    transform-origin: bottom left;
+    top: unset;
+}
+
+.text.date {
+    line-height: 0.8;
+    left: 66vw;
+    top: 60vh;
+}
+
+.text.invite {
+    font-family: 'font-3';
+    font-size: 4.36rem;
+    width: 50vw;
+    top: 11vh;
+    line-height: 1.2;
+}
+
+.text.names {
+    top: 4rem;
+    right: 2rem;
+    left: auto;
+    white-space: nowrap;
+    font-size: 2.3rem;
+    font-weight: 200;
+    letter-spacing: 0.1em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.text.names.down {
+    top: unset;
+    bottom: 3rem;
+}
+
+.text.gerrit {
+    top: 100vh;
+    font-family: 'font-3';
+    line-height: 0.9;
+}
+
+.text.program {
+    top: 126vh;
+    font-weight: 300;
+    font-family: 'font-3';
+    letter-spacing: -0.1em;
+    font-size: 3.2rem;
+    left: 66vw;
+}
+
+.text.program p {
+    font-size: 4.82rem;
+}
+
+.agenda {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    background-color: #fff;
+    color:#000;
+    padding-bottom: 1.8rem;
+}
+.agenda span {
+    letter-spacing: 1px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
 
 .container {
     display: flex;
     flex-direction: column;
-
+    position: fixed;
+    background-blend-mode: difference;
+    mix-blend-mode: difference;
+    filter: blur(30px);
 }
 
 .row {
@@ -166,3 +264,86 @@ body {
 }
 
 
+/* scrolling */
+
+.scroll-container {
+    /* border: 3px solid black;
+    border-radius: 5px; */
+    overflow: hidden;
+
+  }
+
+  .scroll-text {
+    position: fixed;
+    /* animation properties */
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+
+    -moz-animation: my-animation 90s linear infinite;
+    -webkit-animation: my-animation 90s linear infinite;
+    animation: my-animation 90s linear infinite;
+  }
+
+  .scroll-text.down {
+    /* animation properties */
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+
+    -moz-animation: my-animation-2 90s linear infinite;
+    -webkit-animation: my-animation-2 90s linear infinite;
+    animation: my-animation-2 90s linear infinite;
+
+    animation-delay: 30s;
+  }
+
+  /* for Firefox */
+  @-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%); }
+  }
+
+  /* for Chrome */
+  @-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+  }
+
+  @keyframes my-animation {
+    from {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+    to {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation-2 {
+    from { -moz-transform: translateX(-100%); }
+    to { -moz-transform: translateX(100%); }
+  }
+
+  /* for Chrome */
+  @-webkit-keyframes my-animation-2 {
+    from { -webkit-transform: translateX(-100%); }
+    to { -webkit-transform: translateX(100%); }
+  }
+
+  @keyframes my-animation-2 {
+    from {
+      -moz-transform: translateX(-100%);
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
+    }
+    to {
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+    }
+}

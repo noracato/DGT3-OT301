@@ -14,7 +14,7 @@ function fillScreen() {
         addRow(i);
     }
 
-    flipRandomSquares(amount * 10);
+    flipRandomSquares(amount * 12);
 }
 
 function flipRandomSquares(amount) {
